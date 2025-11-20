@@ -2,6 +2,19 @@
 
 An intelligent context management system that uses predictive prefetching and multi-tier caching to optimize context delivery for AI-powered development tools. Built with production-grade vector search, knowledge graphs, and team-based sharing capabilities.
 
+## 🚧 Project Status
+
+**Current Stage**: Prototype / Early Development
+
+- ✅ Architecture designed and documented
+- ✅ Infrastructure setup (Docker, databases)
+- ⚠️ Core API endpoints are placeholders (not yet implemented)
+- ⚠️ Not production-ready
+
+**See [QUICK_START.md](QUICK_START.md) for current installation instructions.**
+
+For production-ready microservices, see [OmniMemory](https://github.com/mrtozner/omnimemory).
+
 ## Background
 
 Omn1-ACE emerged from extensive research into context optimization for AI development tools. The system consolidates proven techniques for predictive prefetching, multi-tier caching, and team-based learning from the [OmniMemory research project](https://github.com/mrtozner/omnimemory). This production-ready implementation focuses on the core features that deliver the most value with the simplest deployment.
@@ -25,6 +38,55 @@ Omn1-ACE implements a 4-layer anticipatory system:
 4. **Collective Intelligence**: Cross-user learning and team-based pattern aggregation
 
 For detailed architecture documentation, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
+## ⚠️ Important: Multi-Tool Context Considerations
+
+Omn1-ACE optimizes context for different AI models, but be aware of these differences:
+
+### Context Window Limits
+
+Different models have different context windows:
+- **Claude 3.5 Sonnet**: 200,000 tokens
+- **GPT-4 Turbo**: 128,000 tokens
+- **Gemini 1.5 Pro**: 1,000,000 tokens
+- **GPT-3.5 Turbo**: 16,000 tokens
+
+**Impact**: Context that works for Claude may exceed GPT-4's limits. Always configure your target model's context window in environment variables.
+
+### Model-Specific Behavior
+
+**Claude (Anthropic)**:
+- Best with structured, detailed context
+- Excellent at following complex instructions
+- Prefers explicit task breakdowns
+
+**GPT (OpenAI)**:
+- Works well with conversational context
+- May need more explicit formatting
+- Better with shorter, focused context
+
+**Gemini (Google)**:
+- Handles very large context windows
+- Good with multimodal content
+- May need different prompt engineering
+
+### Configuration
+
+Set your target model in `.env`:
+```bash
+DEFAULT_TARGET_MODEL=claude  # or gpt, gemini
+CLAUDE_CONTEXT_WINDOW=200000
+GPT_CONTEXT_WINDOW=128000
+GEMINI_CONTEXT_WINDOW=1000000
+```
+
+### Known Issues
+
+1. **Context Overflow**: If you switch from Gemini (1M) to GPT-4 (128K), you may hit limits
+2. **Compression Artifacts**: Different models interpret compressed context differently
+3. **Team Sharing**: Context optimized for one model may not work well for teammates using different models
+
+**Recommendation**: Standardize on one model per team for consistent experience.
 
 ## Quick Start
 
