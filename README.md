@@ -7,6 +7,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Docker](https://img.shields.io/badge/docker-ready-brightgreen.svg)](deploy/docker-compose.yml)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-blue.svg)](https://github.com/mrtozner/omn1-ace)
+[![Stars](https://img.shields.io/github/stars/mrtozner/omn1-ace?style=social)](https://github.com/mrtozner/omn1-ace)
+[![Last Commit](https://img.shields.io/github/last-commit/mrtozner/omn1-ace)](https://github.com/mrtozner/omn1-ace/commits/master)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **[Quick Start](QUICK_START.md)** • **[Documentation](docs/)** • **[Architecture](docs/ARCHITECTURE.md)** • **[Report Issue](https://github.com/mrtozner/omn1-ace/issues)**
