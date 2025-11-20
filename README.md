@@ -163,23 +163,46 @@ Learns from patterns to prefetch:
 
 ### 🐳 Docker Compose (Recommended)
 
-Get started in 5 minutes:
+Get started in 5 minutes using convenience scripts:
 
 ```bash
 # Clone the repository
 git clone https://github.com/mrtozner/omn1-ace.git
 cd omn1-ace
 
+# Start all services (auto-creates .env from template)
+./start.sh
+
+# Check service status
+./status.sh
+
+# View logs
+./logs.sh              # All services
+./logs.sh postgres     # Specific service
+
+# Restart services
+./restart.sh
+
+# Stop services
+./stop.sh
+```
+
+**Available scripts:**
+- `start.sh` - Start all Docker services with health checks
+- `stop.sh` - Stop all services
+- `restart.sh` - Restart all services
+- `logs.sh` - View service logs (all or specific service)
+- `status.sh` - Check service health and status
+
+**Manual Docker commands** (if you prefer):
+```bash
 # Copy environment template
-cp .env.example .env
+cp .env.example .env && nano .env
 
-# IMPORTANT: Edit .env and change POSTGRES_PASSWORD
-nano .env
-
-# Start all services
+# Start services
 docker-compose -f deploy/docker-compose.yml up -d
 
-# Verify services
+# Verify
 curl http://localhost:8000/health
 ```
 
