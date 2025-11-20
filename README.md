@@ -10,9 +10,9 @@
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-blue.svg)](https://github.com/mrtozner/omn1-ace)
 [![Stars](https://img.shields.io/github/stars/mrtozner/omn1-ace?style=social)](https://github.com/mrtozner/omn1-ace)
 [![Last Commit](https://img.shields.io/github/last-commit/mrtozner/omn1-ace)](https://github.com/mrtozner/omn1-ace/commits/master)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/mrtozner/omn1-ace/pulls)
 
-**[Quick Start](QUICK_START.md)** • **[Documentation](docs/)** • **[Architecture](docs/ARCHITECTURE.md)** • **[Report Issue](https://github.com/mrtozner/omn1-ace/issues)**
+**[Quick Start](QUICK_START.md)** • **[Report Issue](https://github.com/mrtozner/omn1-ace/issues)**
 
 ---
 
@@ -244,8 +244,6 @@ Omn1-ACE implements a 4-layer anticipatory system:
 Result: 85% cost reduction ($0.014 vs $0.90 per query)
 ```
 
-**[📐 Detailed Architecture →](docs/ARCHITECTURE.md)**
-
 ---
 
 ## ⚙️ API Endpoints
@@ -396,7 +394,7 @@ GEMINI_CONTEXT_WINDOW=1000000
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions are welcome!
 
 **Before submitting a PR**:
 - All tests pass
@@ -434,7 +432,7 @@ Built with:
 
 **[⭐ Star this repo](https://github.com/mrtozner/omn1-ace)** if you find it useful!
 
-**[📖 Read the Docs](docs/)** • **[💬 Discussions](https://github.com/mrtozner/omn1-ace/discussions)** • **[🐛 Report Bug](https://github.com/mrtozner/omn1-ace/issues)**
+**[💬 Discussions](https://github.com/mrtozner/omn1-ace/discussions)** • **[🐛 Report Bug](https://github.com/mrtozner/omn1-ace/issues)**
 
 Made with ❤️ by [Mert Ozoner](https://github.com/mrtozner)
 
